@@ -107,14 +107,14 @@ module mapdemo {
                 };
 
                 // retrieve poles from Ausgrid service
-                poleData.getPoles({ box: viewbox }).then(function (result) {
+                poleData.getPoles({ box: viewbox }).then((result:PolesResult) => {
                     if (result.d) {
-                        thisScope.setMarkers(result.d);
-                        thisScope.$scope.isLoading = false;                    
+                        this.setMarkers(result.d);
+                        this.$scope.isLoading = false;                    
                     }
-                }, function (error) {
+                }, error => {
 
-                    });
+                });
                 } else {
                     thisScope.resetMarkers();
                     thisScope.resetInfoBoxes();
@@ -144,15 +144,15 @@ module mapdemo {
 
                     var image = workingImage;
                     var hoverImage = workingHoverImage;
-                    if (assets[index].Status == 'reported') {
+                    if (assets[index].Status === 'reported') {
                         image = reportedImage;
                         hoverImage = reportedHoverImage;
                     }
-                    else if (assets[index].Status == 'held') {
+                    else if (assets[index].Status === 'held') {
                         image = heldImage;
                         hoverImage = heldHoverImage;
                     }
-                    else if (assets[index].Status == 'nonausgrid') {
+                    else if (assets[index].Status === 'nonausgrid') {
                         image = nonausgridImage;
                         hoverImage = nonausgridHoverImage;
                     }
@@ -174,7 +174,6 @@ module mapdemo {
         }
 
         attachInfoBox(marker) {
-            var thisScope = this;
             var myOptions = {
                 disableAutoPan: false
                 , pixelOffset: new google.maps.Size(-140, 0)
@@ -191,8 +190,8 @@ module mapdemo {
 
             this.infoBoxArray.push(ib);
             //add click handler
-            google.maps.event.addListener(marker, 'click', function () {
-                thisScope.clickMarker(marker, ib)
+            google.maps.event.addListener(marker, 'click', () => {
+                this.clickMarker(marker, ib);
             });
         }
         ToggleItem(item: JQuery) {

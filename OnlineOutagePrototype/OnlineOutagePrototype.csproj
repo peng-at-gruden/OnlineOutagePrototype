@@ -10,7 +10,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.5</TypeScriptToolsVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -30,6 +30,7 @@
     <Content Include="images\red.png" />
     <Content Include="images\Status_Sprites.png" />
     <Content Include="images\switches.png" />
+    <Content Include="js\app.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.js" />
@@ -54,7 +55,7 @@
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="js\app.ts" />
+    <TypeScriptCompile Include="js\Application.ts" />
     <TypeScriptCompile Include="js\controllers\FormController.ts" />
     <TypeScriptCompile Include="js\controllers\HomeController.ts" />
     <TypeScriptCompile Include="js\controllers\IntroController.ts" />
@@ -69,6 +70,8 @@
     <TypeScriptCompile Include="js\interfaces\IMapScope.ts" />
     <TypeScriptCompile Include="js\interfaces\ISharedData.ts" />
     <TypeScriptCompile Include="js\interfaces\IMapStorage.ts" />
+    <TypeScriptCompile Include="js\models\Pole.ts" />
+    <TypeScriptCompile Include="js\models\PolesResult.ts" />
     <TypeScriptCompile Include="js\services\poleData.ts" />
     <TypeScriptCompile Include="js\services\sharedData.ts" />
     <TypeScriptCompile Include="js\_all.ts" />
@@ -90,7 +93,7 @@
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="data\poles.json" />
-    <None Include="Local.pubxml" />
+    <Content Include="js\app.js.map" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -98,9 +101,7 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="js\models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="default.aspx.cs">

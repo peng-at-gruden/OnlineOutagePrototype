@@ -2,8 +2,7 @@
 
 module mapdemo {
     'use strict';
-
-    /*
+    
     var mapapp = angular.module('mapapp', ['ngRoute', 'uiGmapgoogle-maps'])
         .controller('rootController', RootController)
         .controller('introController', IntroController)
@@ -37,5 +36,4 @@ module mapdemo {
     mapapp.provider("sharedData", SharedData).config((sharedDataProvider: SharedData) => {
         sharedDataProvider.$get();
     });
-    */
 }

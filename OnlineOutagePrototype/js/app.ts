@@ -1,9 +1,10 @@
 ﻿/// <reference path='_all.ts' />
 
-module map {
+module mapdemo {
     'use strict';
 
-    var map = angular.module('map', ['ngRoute', 'uiGmapgoogle-maps'])
+    /*
+    var mapapp = angular.module('mapapp', ['ngRoute', 'uiGmapgoogle-maps'])
         .controller('rootController', RootController)
         .controller('introController', IntroController)
         .controller('homeController', HomeController)
@@ -16,7 +17,7 @@ module map {
         .directive('notallowedcharacters', NotAllowedCharacters.Factory())
     ;
 
-    map.config(['$routeProvider', function routes($routeProvider: ng.route.IRouteProvider) {
+    mapapp.config(['$routeProvider', function routes($routeProvider: ng.route.IRouteProvider) {
         $routeProvider.when('/map',
             {
                 templateUrl: '../views/home.html',
@@ -33,7 +34,8 @@ module map {
             otherwise({ redirectTo: '/' });
     }]);
 
-    map.provider("sharedData", SharedData).config((sharedDataProvider: SharedData) => {
+    mapapp.provider("sharedData", SharedData).config((sharedDataProvider: SharedData) => {
         sharedDataProvider.$get();
     });
+    */
 }

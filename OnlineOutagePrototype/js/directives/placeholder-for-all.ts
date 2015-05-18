@@ -1,4 +1,4 @@
-﻿module map {
+﻿module mapdemo {
     'use strict';
 
     export class PlaceholderForAll {

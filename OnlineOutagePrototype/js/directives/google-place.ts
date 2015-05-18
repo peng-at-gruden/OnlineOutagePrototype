@@ -1,5 +1,5 @@
 ﻿
-module map {
+module mapdemo {
     'use strict';
 
     /**

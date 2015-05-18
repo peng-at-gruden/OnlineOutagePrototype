@@ -1,6 +1,6 @@
 ﻿/// <reference path='../_all.ts' />
 
-module map {
+module mapdemo {
     'use strict';
 
     export class SharedData implements ISharedData {

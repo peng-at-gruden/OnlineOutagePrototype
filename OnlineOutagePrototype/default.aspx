@@ -8,7 +8,7 @@
     <title>Online Outage</title>
     <%: Styles.Render("~/styles/app") %>
 </head>
-<body  ng-app="map" ng-controller="rootController">
+<body  ng-app="mapapp" ng-controller="rootController">
   <form id="aspdotnet_form" name="testform">
     <div id="wrap" class="container">
       <div class="masthead">

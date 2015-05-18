@@ -10,7 +10,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <TypeScriptToolsVersion>1.1</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -30,8 +30,6 @@
     <Content Include="images\red.png" />
     <Content Include="images\Status_Sprites.png" />
     <Content Include="images\switches.png" />
-    <Content Include="js\app.js" />
-    <Content Include="js\_all.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.js" />
@@ -41,8 +39,12 @@
     <Content Include="Scripts\icheck\minimal\grey.css" />
     <Content Include="Scripts\icheck\minimal\grey.png" />
     <Content Include="Scripts\jquery-1.7.2.min.js" />
-    <Content Include="Scripts\jquery.radiobutton.2.0.js" />
-    <Content Include="Scripts\jquery.selectbox.0.2.min.js" />
+    <Content Include="Scripts\jquery.radiobutton.2.0.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\jquery.selectbox.0.2.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Styles\app.css" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="views\form.html" />
@@ -70,14 +72,20 @@
     <TypeScriptCompile Include="js\services\poleData.ts" />
     <TypeScriptCompile Include="js\services\sharedData.ts" />
     <TypeScriptCompile Include="js\_all.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-resource.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery.icheck.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery.radiobutton.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery.selectbox.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-route.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\google.maps.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="js\app.js.map" />
-    <Content Include="js\_all.js.map" />
     <Content Include="packages.config" />
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
@@ -159,6 +167,7 @@
     <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
     <TypeScriptOutFile>$(ProjectDir)js\app.js</TypeScriptOutFile>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <TypeScriptRemoveComments>true</TypeScriptRemoveComments>

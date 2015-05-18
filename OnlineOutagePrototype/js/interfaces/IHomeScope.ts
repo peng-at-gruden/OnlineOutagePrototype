@@ -1,4 +1,4 @@
-﻿module map {
+﻿module mapdemo {
     export interface IHomeScope extends ng.IScope {
         chosenPlace: string;
         isLoading: boolean;

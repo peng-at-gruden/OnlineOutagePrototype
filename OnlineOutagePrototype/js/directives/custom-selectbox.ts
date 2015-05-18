@@ -1,4 +1,4 @@
-﻿module map {
+﻿module mapdemo {
     'use strict';
 
     export class CustomSelectBox {
@@ -11,7 +11,7 @@
             this.require = 'ngModel';
 
             this.link = (scope, element, attrs, model) => {
-                $(element).selectbox();
+                $(element).selectbox({});
             };
         }
 
